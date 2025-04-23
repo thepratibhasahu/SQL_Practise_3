@@ -1,8 +1,8 @@
 Query 3: Display every patient's first_name.
          Order the list by the length of each name and then by alphabetically.
 
-Sol: SELECT first_name FROM patients
-     order by LEN(first_name) ,first_name;
+Sol 1: SELECT first_name FROM patients
+       order by LEN(first_name) ,first_name;
 
 Sol 2: SELECT first_name FROM patients
        order by LEN(first_name) ,first_name asc;
