@@ -1,1 +1,10 @@
+Query 1: Show patient_id and first_name from patients where their first_name start and ends with 's' and is at least 6 characters long.
 
+Sol 1: SELECT patient_id,first_name FROM patients
+       where first_name like 'S____%S';  
+
+Sol 2: SELECT patient_id,first_name FROM patients
+       where first_name like 'S%S' and first_name LIKE '%______%';
+
+Sol 3: SELECT patient_id,first_name FROM patients
+       where first_name like 'S%' and first_name LIKE '%S' AND first_name like '%______%';
