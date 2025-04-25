@@ -1,1 +1,25 @@
+Query 8: Write a solution to find the patient_id, patient_name, and conditions of the patients who have Type I Diabetes.
+         Type I Diabetes always starts with DIAB1 prefix.
+         Return the result table in any order. 
+         Patients table:
+        +------------+--------------+--------------+
+        | patient_id | patient_name | conditions   |
+        +------------+--------------+--------------+
+        | 1          | Daniel       | YFEV COUGH   |
+        | 2          | Alice        |              |
+        | 3          | Bob          | DIAB100 MYOP |
+        | 4          | George       | ACNE DIAB100 |
+        | 5          | Alain        | DIAB201      |
+        +------------+--------------+--------------+
+
+Sol: select patient_id, patient_name, conditions from patients
+     where conditions LIKE '%DIAB1%';
+    
+  Output: 
+     +------------+--------------+--------------+
+     | patient_id | patient_name | conditions   |
+     +------------+--------------+--------------+
+     | 3          | Bob          | DIAB100 MYOP |
+     | 4          | George       | ACNE DIAB100 | 
+     +------------+--------------+--------------+
 
